@@ -1,0 +1,172 @@
+.body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Common */
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Begin Header */
+#header {
+  background-color: #000;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* begin Navigation */
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav li a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav li:hover {
+  background-color: #b4b419;
+  opacity: 0.8;
+}
+
+/* content */
+.card {
+  text-align: center;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.detail-button {
+  background-color: #000;
+  display: block;
+  padding: 4px;
+}
+
+.detail-button:hover {
+  background-color: #ccc;
+  cursor: pointer;
+  color: black;
+}
+
+.col-third {
+  width: 33.33333%;
+  float: left;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.card {
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.container button {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+}
+
+.container button:hover {
+  width: 100%;
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .col-third {
+    width: calc(50%);
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: auto;
+  background-color: #b4b419;
+}
+
+/* Modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup img {
+  width: 100%;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
