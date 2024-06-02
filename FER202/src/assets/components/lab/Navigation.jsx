@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUser, FaShoppingCart } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 export default function Navigation() {
   return (
     <div className="sticky top-0 z-10">
@@ -14,14 +14,19 @@ export default function Navigation() {
             </h2>
           </div>
           <div className="flex gap-10 text-xl mr-40">
-            <li className="list-none hover:text-primary">
-              <a className="" href="">
-                Home
-              </a>
-            </li>
-            <li className="list-none hover:text-primary ">
-              <a href="">Shop</a>
-            </li>
+            <Link to={`/`}>
+              <li className="list-none hover:text-primary">
+                <a className="" href="">
+                  Home
+                </a>
+              </li>
+            </Link>
+            <Link to={`/Shop`}>
+              <li className="list-none hover:text-primary ">
+                <a href="">Shop</a>
+              </li>
+            </Link>
+
             <li className="list-none hover:text-primary">
               <a href="">Blog</a>
             </li>

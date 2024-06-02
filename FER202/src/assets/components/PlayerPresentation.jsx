@@ -7,8 +7,8 @@ export default function PlayerPresentation() {
     <div className="container">
       {Players.map((player) => (
         <div className="column col-third" key={player.id}>
-          <div className="card">
-            <img src={player.img} />
+          <div className="card" style="width: 18rem;">
+            <img className="card-img-top" src={player.img} />
             <h3>{player.name}</h3>
             <p className="title"></p>
             <p>

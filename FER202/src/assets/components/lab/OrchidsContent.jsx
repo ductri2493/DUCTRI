@@ -16,7 +16,7 @@ const OrchidsContent = () => {
               <div className="card h-full">
                 <img
                   src={orchid.Image}
-                  className="card-img-top"
+                  className="card-img-top w-full h-[300px] object-fit-cover rounded"
                   alt={orchid.Name}
                 />
                 <div className="card-body">
@@ -40,7 +40,7 @@ const OrchidsContent = () => {
                     Category: {orchid.Category}
                     <br />
                   </p>
-                  <Link to={`detail/${orchid.Id}`}>
+                  <Link to={`/detail/${orchid.Id}`}>
                     <button
                       onClick={() => {
                         setOrchid(orchid);

@@ -184,7 +184,7 @@ export const OrchidData = [
     Name: "Angraecum Moonlight",
     Rating: 4,
     IsSpecial: false,
-    Image: "src/assets/image/Angraecum Moonlight.jpg",
+    Image: "src/assets/image/Angraecum MoonLightjpg.jpg",
     Color: "white",
     Origin: "Madagascar",
     Category: "Angraecum",
