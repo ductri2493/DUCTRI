@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
-    <div className="min-h-[1000px] bg-[#F2F2F2]">
+    <div className="bg-[#F2F2F2]">
       <div className="container p-[30px]">
         <div className="row">
           <div className="col-5">
@@ -50,6 +50,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <footer class="text-center text-lg-start bg-white">
+        <div className="text-center p-3">
+          © 2024 Copyright:
+          <a className="text-body">OrchidsShop.com</a>
+        </div>
+      </footer>
     </div>
   );
 };

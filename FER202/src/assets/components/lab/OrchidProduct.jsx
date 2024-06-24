@@ -6,17 +6,27 @@ const OrchidProduct = () => {
   const orchid = OrchidData.find((obj) => {
     return obj.Id === userName.Id;
   });
-    // let cost = orchid.cost.toLocaleString();
   return (
     <div className="min-h-[800px] bg-[#DADADA]">
       <div className="container top-10 pt-10 ">
         <div className="row bg-white p-10 min-h-[500px]">
           <div className="col-4">
-            <img className="w-full object-fit-cover" src={`../${orchid.Image}`} />
+            <img
+              className="w-full object-fit-cover"
+              src={`../${orchid.Image}`}
+            />
           </div>
           <div className="col-8">
             <h1 className="fw-bold fs-3">{orchid.Name}</h1>
-            <p className="mt-3">{orchid.Infor}</p>
+            <p className="mt-3 font-bold">{orchid.Infor}</p>
+            <h2>
+              Color: {orchid.Color}
+              <br />
+              Origin: {orchid.Origin}
+              <br />
+              Category: {orchid.Category}
+              <br />
+            </h2>
           </div>
         </div>
       </div>

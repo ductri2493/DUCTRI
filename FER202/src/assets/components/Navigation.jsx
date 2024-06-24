@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import M from "materialize-css";
+import "materialize-css/dist/css/materialize.min.css";
 import { ThemeContext } from "./ThemeContext";
 
 export default function Navigation() {
@@ -6,7 +8,7 @@ export default function Navigation() {
 
   return (
     <div className="App">
-      <nav
+      <Navbar
         className="App-nav"
         style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
         data-testid="toggle-theme-btn"
@@ -41,7 +43,7 @@ export default function Navigation() {
             Toggle to {!dark ? "Dark" : "Light"} theme
           </button>
         </div>
-      </nav>
+      </Navbar>
     </div>
   );
 }

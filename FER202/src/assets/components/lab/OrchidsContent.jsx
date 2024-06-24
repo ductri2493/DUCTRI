@@ -15,11 +15,11 @@ const OrchidsContent = () => {
             <div className="col-3 mb-4" key={orchid.Id}>
               <div className="card h-full">
                 <img
-                  src={orchid.Image}
                   className="card-img-top w-full h-[300px] object-fit-cover rounded"
+                  src={orchid.Image}
                   alt={orchid.Name}
                 />
-                <div className="card-body">
+                <div className="card-body shadow-md ">
                   <h4 className="card-title fw-bold">{orchid.Name}</h4>
                   <p className="card-text ">
                     Rating: {orchid.Rating}
@@ -28,7 +28,6 @@ const OrchidsContent = () => {
                         key={i}
                         src={Starrate}
                         width={14}
-                        alt=""
                         className="inline-block"
                       />
                     ))}
@@ -46,9 +45,9 @@ const OrchidsContent = () => {
                         setOrchid(orchid);
                       }}
                       type="button"
-                      className="btn btn-outline-warning mt-4 position-relative"
+                      className="btn btn-outline-warning mt-4 position-relative text-black "
                     >
-                      <a href="#popup1" id="openPopUp">
+                      <a>
                         View Details
                         {orchid.IsSpecial && (
                           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -63,17 +62,13 @@ const OrchidsContent = () => {
             </div>
           ))}
         </div>
-        <div id="popup1" className="overlay">
-          <div className="popup">
-            <img src={orchid.Image} />
-            <h2>{orchid.Name}</h2>
-            <a href="#" className="close">
-              &times;
-            </a>
-            <div className="content">{orchid.Infor}</div>
-          </div>
-        </div>
       </div>
+      <footer class="text-center text-lg-start bg-white">
+        <div className="text-center p-3">
+          © 2024 Copyright:
+          <a className="text-body">OrchidsShop.com</a>
+        </div>
+      </footer>
     </div>
   );
 };
