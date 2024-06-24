@@ -15,30 +15,30 @@ export default function Navigation() {
           </div>
           <div className="flex gap-10 text-xl mr-40">
             <Link to={`/`}>
-              <li className="list-none hover:text-primary">
+              <li className="list-none hover:text-primary hover:transform hover:scale-125 transition-transform">
                 <a className="" href="">
                   Home
                 </a>
               </li>
             </Link>
             <Link to={`/Shop`}>
-              <li className="list-none hover:text-primary ">
+              <li className="list-none hover:text-primary hover:transform hover:scale-125 transition-transform ">
                 <a href="">Shop</a>
               </li>
             </Link>
 
-            <li className="list-none hover:text-primary">
+            <li className="list-none hover:text-primary hover:transform hover:scale-125 transition-transform">
               <a href="">Blog</a>
             </li>
-            <li className="list-none hover:text-primary">
+            <li className="list-none hover:text-primary hover:transform hover:scale-125 transition-transform">
               <a href="">About</a>
             </li>
           </div>
           <div className="flex gap-10">
             <div>
-              <a href="" className="text-2xl hover:text-primary">
+              <Link to={"/Add"} href="" className="text-2xl hover:text-primary ">
                 <FaUser />
-              </a>
+              </Link>
             </div>
             <div>
               <a href="" className="text-2xl hover:text-primary">

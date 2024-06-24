@@ -50,7 +50,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <footer class="text-center text-lg-start bg-white">
+      <footer className="text-center text-lg-start bg-white">
         <div className="text-center p-3">
           © 2024 Copyright:
           <a className="text-body">OrchidsShop.com</a>
