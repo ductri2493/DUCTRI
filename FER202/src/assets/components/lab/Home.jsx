@@ -1,7 +1,25 @@
-import { OrchidData } from "./ListOfOrchids";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 const Home = () => {
+  const [APIData, setAPIData] = useState([]);
+
+  const baseURL = `https://66643b32932baf9032aa6cd8.mockapi.io/ListOfOrchids`;
+
+  useEffect(() => {
+    fetch(baseURL)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setAPIData(data);
+      })
+      .catch((error) => console.log(error.message));
+  }, []);
+
   return (
     <div className="bg-[#F2F2F2]">
       <div className="container p-[30px]">
@@ -28,21 +46,21 @@ const Home = () => {
           </div>
           <div className="col">
             <div className="row">
-              {OrchidData.slice(0, 3).map((orchid, index) => (
+              {APIData.slice(0, 3).map((orchid, index) => (
                 <div className="col p-3 " key={index}>
                   <img
                     className="w-[192px] h-[192px] rounded"
-                    src={orchid.Image}
+                    src={orchid.image}
                   />
                 </div>
               ))}
             </div>
             <div className="row">
-              {OrchidData.slice(3, 6).map((orchid, index) => (
+              {APIData.slice(3, 6).map((orchid, index) => (
                 <div className="col p-3 " key={index}>
                   <img
                     className="w-[192px] h-[192px] rounded"
-                    src={orchid.Image}
+                    src={orchid.image}
                   />
                 </div>
               ))}
@@ -50,12 +68,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <footer className="text-center text-lg-start bg-white">
-        <div className="text-center p-3">
-          © 2024 Copyright:
-          <a className="text-body">OrchidsShop.com</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
