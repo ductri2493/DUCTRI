@@ -1,6 +1,6 @@
 // src/assets/components/lab/Navigation.jsx
 import React from "react";
-import { FaUser, FaShoppingCart, FaGoogle  } from "react-icons/fa";
+import { FaUser, FaShoppingCart, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
 import { UserAuth } from "../../../../context/AuthConext";
@@ -62,13 +62,16 @@ export default function Navigation() {
             </div>
             <div>
               {user ? (
-                <Typography
-                  textAlign="center"
-                  onClick={handleSignOut}
-                  style={{ cursor: "pointer" }}
-                >
-                  Logout
-                </Typography>
+                <div className="flex items-center" >
+                  <img
+                    src={user.photoURL}
+                    alt={user.displayName}
+                    className="w-10 h-10 rounded-full mr-2"
+                  />
+                  <Typography className="cursor-pointer" textAlign="center" onClick={handleSignOut} >
+                    Logout
+                  </Typography>
+                </div>
               ) : (
                 <Button
                   onClick={handleSignIn}
@@ -85,9 +88,9 @@ export default function Navigation() {
                   className="bg-black hover:transform hover:scale-125 transition-transform  ease-in-out"
                 >
                   <div className="pr-2">
-                  <FaGoogle  size={20}/>
-                  </div>  
-                  
+                    <FaGoogle size={20} />
+                  </div>
+
                   Sign in with Google
                 </Button>
               )}
