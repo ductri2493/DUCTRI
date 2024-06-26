@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUser, FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";\
+import { UserAuth   } from "../../../context/AuthConext";
 export default function Navigation() {
   return (
     <div className="sticky top-0 z-10">
