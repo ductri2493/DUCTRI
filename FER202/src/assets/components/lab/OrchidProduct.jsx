@@ -35,27 +35,43 @@ const OrchidProduct = () => {
   }
 
   return (
-    <div className="bg-[#DADADA]">
-      <div className="top-10">
-        <div className="row bg-white p-10 min-h-[400px]">
-          <div className="col-4">
-            <img className="w-full object-fit" src={orchid.image} alt={orchid.name} />
-          </div>
-          <div className="col-8">
-            <h1 className="fw-bold fs-3">{orchid.name}</h1>
-            <p className="mt-3 font-bold">{orchid.info}</p>
-            <h2>
-              Color: {orchid.color}
-              <br />
-              Origin: {orchid.origin}
-              <br />
-              Category: {orchid.category}
-              <br />
-            </h2>
+    <div className=" bg-white">
+      <div className="flex flex-col">
+        <div className="flex-grow">
+          <div className="flex flex-col items-center justify-center min-h-[70vh]">
+            <div className="bg-white p-10  w-full max-w-6xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="col-span-1">
+                  <div className="h-64 overflow-hidden">
+                    <img
+                      className="w-full h-full object-cover rounded-xl"
+                      src={orchid.image}
+                      alt={orchid.name}
+                    />
+                  </div>
+                </div>
+
+                <div className="col-span-2">
+                  <h1 className="font-bold text-3xl">{orchid.name}</h1>
+                  <p className="mt-3 font-bold">{orchid.info}</p>
+                  <div className="flex justify-between ">
+                    <p className="mt-2 ">
+                      Color: {orchid.color}
+                      <br />
+                      Origin: {orchid.origin}
+                      <br />
+                      Category: {orchid.category}
+                      <br />
+                    </p>
+                    <button className="bg-[red] p-1">kakakak</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

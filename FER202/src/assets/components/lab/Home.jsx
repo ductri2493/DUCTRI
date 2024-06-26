@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
+
 const Home = () => {
   const [APIData, setAPIData] = useState([]);
 
@@ -21,47 +22,37 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#F2F2F2]">
-      <div className="container p-[30px]">
-        <div className="row">
-          <div className="col-5">
-            <div className="row">
+    <div className="bg-[#F2F2F2] min-h-screen flex flex-col">
+      <div className="container p-[30px] flex-grow">
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-1/2">
+            <div>
               <h1 className="text-[60px]">Flowers, 🌻 what the world needs</h1>
             </div>
-            <div className="row py-[30px]">
-              <p>Browse between hounders of flowers</p>
+            <div className="py-[30px]">
+              <p>Browse between hundreds of flowers</p>
             </div>
-            <div className="row d-inline-flex p-2">
+            <div className="flex">
               <Link to={`/Shop`}>
                 <button className="bg-[#FF8F52] rounded text-white py-1 px-3">
-                  <a
-                    href=""
-                    style={{ color: "inherit", textDecoration: "none" }}
-                  >
+                  <span style={{ color: "inherit", textDecoration: "none" }}>
                     Browse
-                  </a>
+                  </span>
                 </button>
               </Link>
             </div>
           </div>
-          <div className="col">
-            <div className="row">
-              {APIData.slice(0, 3).map((orchid, index) => (
-                <div className="col p-3 " key={index}>
-                  <img
-                    className="w-[192px] h-[192px] rounded"
-                    src={orchid.image}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="row">
-              {APIData.slice(3, 6).map((orchid, index) => (
-                <div className="col p-3 " key={index}>
-                  <img
-                    className="w-[192px] h-[192px] rounded"
-                    src={orchid.image}
-                  />
+          <div className="flex-grow mt-5 md:mt-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {APIData.slice(0, 6).map((orchid, index) => (
+                <div key={index} className="p-3">
+                  <div className="w-[192px] h-[192px] overflow-hidden rounded">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={orchid.image}
+                      alt={orchid.name}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -72,4 +63,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
