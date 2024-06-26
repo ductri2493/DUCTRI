@@ -52,12 +52,12 @@ export default function Navigation() {
           <div className="flex gap-10">
             <div>
               <Link to="/Dashboard" className="text-2xl hover:text-primary ">
-                <FaUser />
+                <FaUser className="mt-2" />
               </Link>
             </div>
             <div>
               <Link to="/Cart" className="text-2xl hover:text-primary ">
-                <FaShoppingCart />
+                <FaShoppingCart className="mt-2" />
               </Link>
             </div>
             <div>
