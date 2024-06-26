@@ -1,14 +1,15 @@
 // src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./assets/components/lab/Navigation";
-import OrchidsContent from "./assets/components/lab/OrchidsContent";
-import OrchidProduct from "./assets/components/lab/OrchidProduct";
-import Home from "./assets/components/lab/Home";
-import AddProduct from "./assets/components/lab/AddProduct";
-import Protected from "./assets/components/lab/Protected";
+import Navigation from "./assets/components/lab/component/Navigation";
+import AddProduct from "./assets/components/lab/component/AddProduct";
+import Protected from "./assets/components/lab/component/Protected";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import Home from "./assets/components/lab/component/Home";
+import OrchidsContent from "./assets/components/lab/component/OrchidsContent";
+import OrchidProduct from "./assets/components/lab/component/OrchidProduct";
+import DashBoard from "./assets/components/lab/component/DashBoard";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Shop" element={<OrchidsContent />} />
         <Route path="/detail/:id" element={<OrchidProduct />} />
+        <Route path="/Dashboard" element={<Protected><DashBoard /></Protected>} />
         <Route path="/Add" element={<Protected><AddProduct /></Protected>} />
       </Routes>
     </div>

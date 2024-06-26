@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 const Home = () => {
   const [APIData, setAPIData] = useState([]);
@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             <div className="flex">
               <Link to={`/Shop`}>
-                <button className="bg-[#FF8F52] rounded text-white py-1 px-3">
+                <button className="bg-[#FF8F52] rounded text-white py-1 px-3 transform hover:scale-125 transition-transform duration-200 ease-in-out">
                   <span style={{ color: "inherit", textDecoration: "none" }}>
                     Browse
                   </span>

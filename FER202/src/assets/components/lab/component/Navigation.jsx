@@ -1,9 +1,9 @@
 // src/assets/components/lab/Navigation.jsx
 import React from "react";
-import { FaUser, FaShoppingCart } from "react-icons/fa";
+import { FaUser, FaShoppingCart, FaGoogle  } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
-import { UserAuth } from "../../../context/AuthConext";
+import { UserAuth } from "../../../../context/AuthConext";
 
 export default function Navigation() {
   const { user, logOut, googleSignIn } = UserAuth();
@@ -35,7 +35,7 @@ export default function Navigation() {
               </Link>
             </h2>
           </div>
-          <div className="flex gap-10 text-xl mr-40">
+          <div className="flex gap-10 text-xl mr-30">
             <li className="list-none hover:text-primary hover:transform hover:scale-125 transition-transform">
               <Link to="/">Home</Link>
             </li>
@@ -51,7 +51,7 @@ export default function Navigation() {
           </div>
           <div className="flex gap-10">
             <div>
-              <Link to="/Add" className="text-2xl hover:text-primary ">
+              <Link to="/Dashboard" className="text-2xl hover:text-primary ">
                 <FaUser />
               </Link>
             </div>
@@ -72,9 +72,22 @@ export default function Navigation() {
               ) : (
                 <Button
                   onClick={handleSignIn}
-                  sx={{ color: "white", display: "block" }}
-                  className="bg-black hover:transform hover:scale-125 transition-transform"
+                  sx={{
+                    color: "white",
+                    backgroundColor: "black",
+                    padding: "5px 10px",
+                    borderRadius: "5px",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      transition: "transform 0.2s ease-in-out",
+                    },
+                  }}
+                  className="bg-black hover:transform hover:scale-125 transition-transform  ease-in-out"
                 >
+                  <div className="pr-2">
+                  <FaGoogle  size={20}/>
+                  </div>  
+                  
                   Sign in with Google
                 </Button>
               )}

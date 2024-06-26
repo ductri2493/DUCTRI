@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "./Footer";
 import { useEffect, useState } from "react";
 
 const OrchidProduct = () => {
@@ -36,9 +36,9 @@ const OrchidProduct = () => {
 
   return (
     <div className=" bg-white">
-      <div className="flex flex-col">
+      <div className="">
         <div className="flex-grow">
-          <div className="flex flex-col items-center justify-center min-h-[70vh]">
+          <div className="min-h-[70vh]">
             <div className="bg-white p-10  w-full max-w-6xl">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="col-span-1">
@@ -50,20 +50,22 @@ const OrchidProduct = () => {
                     />
                   </div>
                 </div>
-
                 <div className="col-span-2">
                   <h1 className="font-bold text-3xl">{orchid.name}</h1>
-                  <p className="mt-3 font-bold">{orchid.info}</p>
+                  <p className="mt-3 font-sm text-[#838383]">{orchid.info}</p>
                   <div className="flex justify-between ">
                     <p className="mt-2 ">
-                      Color: {orchid.color}
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
+                        Color: {orchid.color}
+                      </span>
                       <br />
-                      Origin: {orchid.origin}
-                      <br />
-                      Category: {orchid.category}
-                      <br />
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
+                        Origin: {orchid.origin}
+                      </span>
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
+                        Category: {orchid.category}
+                      </span>
                     </p>
-                    <button className="bg-[red] p-1">kakakak</button>
                   </div>
                 </div>
               </div>

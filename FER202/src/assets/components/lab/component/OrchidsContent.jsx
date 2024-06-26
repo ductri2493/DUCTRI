@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Starrate from "../../images/starrate.png";
-import "./OrchidContent.css";
+import Starrate from "../../../images/starrate.png";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 const OrchidsContent = () => {
   const [APIData, setAPIData] = useState([]);

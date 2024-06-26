@@ -65,9 +65,8 @@ const AddProduct = () => {
 
   return (
     <div>
-      <div className="container">
-        <h1 className="my-4 text-2xl font-bold">Add New Orchid</h1>
-
+      <div className="container border-2 rounded-lg">
+        <h1 className="my-4 text-2xl font-bold">Add New <span className="text-[#FF8F52]"> Orchid</span></h1>
         <form onSubmit={formik.handleSubmit}>
           <div className="flex">
             <div className="form-group mb-3 mr-8">
@@ -76,7 +75,7 @@ const AddProduct = () => {
                 id="name"
                 name="name"
                 type="text"
-                className="form-control"
+                className="form-control shadow-md "
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.name}
@@ -91,7 +90,7 @@ const AddProduct = () => {
                 id="image"
                 name="image"
                 type="text"
-                className="form-control "
+                className="form-control shadow-md "
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.image}
@@ -107,7 +106,7 @@ const AddProduct = () => {
               id="rating"
               name="rating"
               type="number"
-              className="form-control w-[80px]"
+              className="form-control shadow-md w-[80px]"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.rating}
@@ -141,7 +140,7 @@ const AddProduct = () => {
                 id="color"
                 name="color"
                 type="text"
-                className="form-control"
+                className="form-control shadow-md"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.color}
@@ -157,7 +156,7 @@ const AddProduct = () => {
                 id="origin"
                 name="origin"
                 type="text"
-                className="form-control"
+                className="form-control shadow-md"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.origin}
@@ -173,7 +172,7 @@ const AddProduct = () => {
                 id="category"
                 name="category"
                 type="text"
-                className="form-control"
+                className="form-control shadow-md"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.category}
@@ -189,7 +188,7 @@ const AddProduct = () => {
             <textarea
               id="info"
               name="info"
-              className="form-control"
+              className="form-control shadow-md"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.info}
@@ -199,7 +198,7 @@ const AddProduct = () => {
             ) : null}
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary mb-4">
             Add Product
           </button>
         </form>
