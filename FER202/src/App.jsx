@@ -10,6 +10,8 @@ import Home from "./assets/components/lab/component/Home";
 import OrchidsContent from "./assets/components/lab/component/OrchidsContent";
 import OrchidProduct from "./assets/components/lab/component/OrchidProduct";
 import DashBoard from "./assets/components/lab/component/DashBoard";
+import About from "./assets/components/lab/component/About";
+import Blog from "./assets/components/lab/component/Blog";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         <Route path="/detail/:id" element={<OrchidProduct />} />
         <Route path="/Dashboard" element={<Protected><DashBoard /></Protected>} />
         <Route path="/Add" element={<Protected><AddProduct /></Protected>} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Blog" element={<Blog />} />
+
       </Routes>
     </div>
   );
